@@ -1,7 +1,7 @@
 const { Pool } = require('pg');
 const queries = require('./queries');
 
-// Load the environment variables from .envEX file
+// Load the environment variables from .env file
 require('dotenv').config();
 
 // Create a connection pool for PostgreSQL
@@ -9,7 +9,7 @@ const pool = new Pool({
   host: process.env.DB_HOST || 'localhost',
   user: process.env.DB_USER || 'postgres',
   password: process.env.DB_PASSWORD || '',
-  database: process.env.DB_NAME || 'company_db',
+  database: process.env.DB_NAME || 'employee_tracker',
   port: process.env.DB_PORT || 5432, 
   connectionTimeoutMillis: 10000, //timesout if connection takes longer than 10 seconds
   idleTimeoutMillis: 15000, // closes idle connections after 15 seconds
