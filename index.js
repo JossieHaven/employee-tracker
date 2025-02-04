@@ -1,4 +1,4 @@
-const inquirer = require('inquirer');
+import inquirer from 'inquirer';
 const db = require('./db'); // Import functions from db.js which contains all database functions.
 
 async function mainMenu() {
